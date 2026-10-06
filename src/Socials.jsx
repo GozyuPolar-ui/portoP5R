@@ -20,17 +20,17 @@ const ROLES = [
 
 const ITEMS = [
   {
-    id: "X", label: "X (TWITTER)", handle: "@Remon:)", href: "https://x.com/", icon: "𝕏", barIcon: icon1, bars: 1, newBars: [0], counts: ["76"],
-    titles: ["HxH diagram"],
-    links: ["https://x.com/Jalonba/status/2071343110416728201"],
+    id: "X", label: "X (TWITTER)", handle: "@ExceedOGHQ", href: "https://x.com/ExceedOGHQ", icon: "𝕏", barIcon: icon1, bars: 1, newBars: [0], counts: ["0"],
+    titles: ["Introduction"],
+    links: ["https://x.com/ExceedOGHQ"],
     stats: [
-      { tag: "FOL", value: "170", color: "#9147ff" },
+      { tag: "FOL", value: "0", color: "#9147ff" },
     ],
   },
   {
     id: "instagram", label: "INSTAGRAM", handle: "@r3mon34", href: "https://www.instagram.com/r3mon34/", icon: <span style={{ position: "relative", top: "-3px" }}>📷</span>, barIcon: icon2, bars: 1, newBars: [0], counts: ["48"],
     titles: ["Self Dev"],
-    links: ["https://instagram.com/p/ChfplqFPmcf/"],
+    links: ["https://www.instagram.com/r3mon34/"],
     stats: [
       { tag: "FOL", value: "63", color: "#e1306c" },
       { tag: "PST", value: "32",  color: "#f77737" },
