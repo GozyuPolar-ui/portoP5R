@@ -2,7 +2,7 @@
 
 A personal portfolio of **Matius Remon**, styled after the menu UI of *Persona 5*: red, black and white, skewed type, and a Joker cut-in every time you pick something.
 
-> **Live demo:** [porto-p5-r.vercel.app](https://porto-p5-r.vercel.app/)
+> **[View Live Demo](https://porto-p5-r.vercel.app/)**
 
 ![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite&logoColor=white)
