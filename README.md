@@ -37,10 +37,9 @@ A personal portfolio of **Matius Remon**, styled after the menu UI of *Persona 5
 
 ## Getting started
 
-Requires **Node.js 20.19+ or 22+** and **Git LFS**. The background video `src/assets/main1.mp4` (~226 MB) is stored with Git LFS, so install it before cloning or the video will be a tiny text stub.
+Requires **Node.js 20.19+ or 22+**.
 
 ```bash
-git lfs install
 git clone https://github.com/GozyuPolar-ui/portoP5R.git
 cd portoP5R
 npm install
@@ -98,8 +97,8 @@ Joker transition timing (when the page changes during the clip) is in `CLIPS` at
 
 It is a static site, so any static host works:
 
-1. **Vercel / Netlify / Cloudflare Pages:** import the repo, build command `npm run build`, output directory `dist`. Make sure Git LFS is enabled for the project, otherwise `main1.mp4` ships as a stub.
-2. **GitHub Pages:** build in a GitHub Action with `actions/checkout` set to `lfs: true`, then publish `dist/`.
+1. **Vercel / Netlify / Cloudflare Pages:** import the repo, build command `npm run build`, output directory `dist`.
+2. **GitHub Pages:** build in a GitHub Action (`npm ci && npm run build`) and publish `dist/`. Vite needs `base: '/portoP5R/'` in `vite.config.js` when the site lives at `username.github.io/portoP5R/`.
 
 Once it is live, put the URL in the **Live demo** line above.
 
