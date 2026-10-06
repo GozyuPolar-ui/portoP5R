@@ -7,6 +7,8 @@ import PageTransition from './PageTransition'
 import Socials from './Socials'
 import AboutMe from './AboutMe'
 import SideProjectsPage from './SideProjectsPage'
+import { JokerTransitionProvider } from './JokerTransition'
+import { useJokerNavigate } from './jokerContext'
 import mainVideo from './assets/main1.mp4'
 import './App.css'
 
@@ -334,10 +336,16 @@ function BackgroundMusic() {
 
 function MenuScreen() {
   const navigate = useNavigate()
+  const jokerNavigate = useJokerNavigate()
 
   const handleNavigate = (page) => {
     if (page === 'github') {
       window.open('https://github.com/jalonba-x/CV-Persona', '_blank', 'noopener,noreferrer')
+      return
+    }
+    // Joker landing / fail clip (random), which navigates once the screen is covered
+    if (jokerNavigate) {
+      jokerNavigate(page)
       return
     }
     navigate(`/${page}`)
@@ -509,11 +517,13 @@ export default function App() {
       <SiteBackgroundVideo />
       <OrientationOverlay />
       <div className="stage-viewport">
-        <BackButton />
-        <div className="site-content-layer">
-          <AnimatedRoutes />
-        </div>
-        <BackgroundMusic />
+        <JokerTransitionProvider>
+          <BackButton />
+          <div className="site-content-layer">
+            <AnimatedRoutes />
+          </div>
+          <BackgroundMusic />
+        </JokerTransitionProvider>
       </div>
     </div>
   )

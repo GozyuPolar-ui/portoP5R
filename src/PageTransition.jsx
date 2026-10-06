@@ -147,6 +147,8 @@ function TransitionOverlay({ variant }) {
 export default function PageTransition({ children, variant = "default" }) {
   const location = useLocation();
   const selectSoundRef = useRef(null);
+  // Menu selections play the Joker clip instead, so skip the stripes for those
+  const cameFromJoker = Boolean(location.state?.joker);
 
   useEffect(() => {
     playSelectSound();
@@ -156,7 +158,7 @@ export default function PageTransition({ children, variant = "default" }) {
     <>
       <AnimatePresence mode="wait">
         <motion.div key={location.pathname} style={{ position: "relative" }}>
-          <TransitionOverlay variant={variant} />
+          {!cameFromJoker && <TransitionOverlay variant={variant} />}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
