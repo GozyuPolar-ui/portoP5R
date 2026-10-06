@@ -2,7 +2,7 @@
 
 A personal portfolio of **Matius Remon**, styled after the menu UI of *Persona 5*: red, black and white, skewed type, and a Joker cut-in every time you pick something.
 
-> **Live demo:** _coming soon_ (not deployed yet, see [Deployment](#deployment))
+> **Live demo:** [porto-p5-r.vercel.app](https://porto-p5-r.vercel.app/)
 
 ![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite&logoColor=white)
@@ -100,7 +100,7 @@ It is a static site, so any static host works:
 1. **Vercel / Netlify / Cloudflare Pages:** import the repo, build command `npm run build`, output directory `dist`.
 2. **GitHub Pages:** build in a GitHub Action (`npm ci && npm run build`) and publish `dist/`. Vite needs `base: '/portoP5R/'` in `vite.config.js` when the site lives at `username.github.io/portoP5R/`.
 
-Once it is live, put the URL in the **Live demo** line above.
+The live demo is deployed on Vercel and redeploys automatically on every push to `main`.
 
 ## Credits and disclaimer
 
