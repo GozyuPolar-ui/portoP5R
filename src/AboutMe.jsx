@@ -1,15 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { playSelectSound } from "./utils/audio.js";
 import { useNavigate } from "react-router-dom";
-import char1 from "./assets/char1.png";
-import char2 from "./assets/char2.png";
-import char3 from "./assets/char3.png";
+import char1 from "./assets/char1.webp";
+import char2 from "./assets/char2.webp";
+import char3 from "./assets/char3.webp";
 import icon1 from "./assets/icon1.png";
 import icon2 from "./assets/icon2.png";
 import icon3 from "./assets/icon3.png";
-import mainm from "./assets/mainm.jpeg";
-import mainm2 from "./assets/mainm2.jpeg";
-import mainf from "./assets/mainf.jpeg";
+import mainm from "./assets/mainm.webp";
+import mainm2 from "./assets/mainm2.webp";
+import mainf from "./assets/mainf.webp";
 
 const CHARS = [char1, char2, char3];
 const MAIN_IMAGES = [mainm, mainm2, mainf];

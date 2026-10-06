@@ -119,7 +119,7 @@ export default function ResumePage() {
   return (
     <div id="menu-screen">
       <div className="resume-entry-mask" aria-hidden="true">
-        <video className="resume-entry-video" src={mainVideo} autoPlay loop muted playsInline />
+        <video className="resume-entry-video" src={mainVideo} poster="/main-poster.jpg" autoPlay loop muted playsInline />
       </div>
       
       <style>{`

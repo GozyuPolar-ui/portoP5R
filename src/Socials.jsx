@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { playSelectSound } from "./utils/audio.js";
-import char1 from "./assets/char1.png";
-import char2 from "./assets/char2.png";
-import char3 from "./assets/char3.png";
+import char1 from "./assets/char1.webp";
+import char2 from "./assets/char2.webp";
+import char3 from "./assets/char3.webp";
 import bgVideo from "./assets/main1.mp4";
-import newsign from "./assets/newsign.png";
+import newsign from "./assets/newsign.webp";
 import icon1 from "./assets/icon1.png";
 import icon2 from "./assets/icon2.png";
 import icon3 from "./assets/icon3.png";
@@ -97,9 +97,8 @@ export default function Socials() {
 
   return (
     <div id="menu-screen">
-      <video className="sc-bg-video" src={bgVideo} autoPlay loop muted playsInline />
+      <video className="sc-bg-video" src={bgVideo} poster="/main-poster.jpg" autoPlay loop muted playsInline />
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,700;1,700&display=swap');
 
         #menu-screen {
           position: fixed !important;

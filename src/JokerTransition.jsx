@@ -17,8 +17,10 @@ const CLIPS = {
   fail: { src: jokerFail, navigateAt: 0.35, skip: null },
 }
 
-const KEY_W = 960
-const KEY_H = 540
+// Keying runs per frame on the CPU, so touch devices use a smaller working size
+// (it is stretched to fill the screen anyway; the silhouette stays smooth).
+const isTouch = () => window.matchMedia?.('(pointer: coarse)').matches
+const keySize = () => (isTouch() ? [640, 360] : [960, 540])
 const PREPARE_MS = 2500 // max wait for a clip to get ready before giving up on it
 const SAFETY_MS = 8000
 
@@ -97,6 +99,7 @@ export function JokerTransitionProvider({ children }) {
 
     busyRef.current = true
     const clip = CLIPS[kind]
+    const [KEY_W, KEY_H] = keySize()
     canvas.width = KEY_W
     canvas.height = KEY_H
     const ctx = canvas.getContext('2d', { willReadFrequently: true })

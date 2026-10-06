@@ -358,7 +358,28 @@ function MenuScreen() {
   )
 }
 
+// These pages draw their own full-screen copy of the background video on top,
+// so the one underneath would be decoded for nothing. Pause it once the page is
+// covered (after the entry animation), resume when going back to the menu.
+const OWN_VIDEO_PATHS = ['/socials', '/resume']
+const COVER_DELAY_MS = 1400
+
 function SiteBackgroundVideo() {
+  const location = useLocation()
+  const videoRef = useRef(null)
+  const covered = OWN_VIDEO_PATHS.includes(location.pathname)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    if (!covered) {
+      video.play().catch(() => {})
+      return
+    }
+    const t = setTimeout(() => video.pause(), COVER_DELAY_MS)
+    return () => clearTimeout(t)
+  }, [covered])
+
   return (
     <>
       <style>{`
@@ -382,8 +403,10 @@ function SiteBackgroundVideo() {
         }
       `}</style>
       <video
+        ref={videoRef}
         className="site-bg-video"
         src={mainVideo}
+        poster="/main-poster.jpg"
         autoPlay
         loop
         muted
