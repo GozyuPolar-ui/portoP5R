@@ -340,7 +340,7 @@ function MenuScreen() {
 
   const handleNavigate = (page) => {
     if (page === 'github') {
-      window.open('https://github.com/jalonba-x/CV-Persona', '_blank', 'noopener,noreferrer')
+      window.open('https://github.com/GozyuPolar-ui', '_blank', 'noopener,noreferrer')
       return
     }
     // Joker landing / fail clip (random), which navigates once the screen is covered

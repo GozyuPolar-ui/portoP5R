@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 import mainVideo from "./assets/main1.mp4";
 
 const ITEMS = [
-  { id: "i", badge: "I", title: "EDUCATION", subtitle: "BA Language and Literature / Diploma in Intercultural Studies", rank: 3 },
-  { id: "ii", badge: "II", title: "SKILLS", subtitle: "Google Workspace / Basic JavaScript / Adobe InDesign / Adobe Photoshop", rank: 4 },
-  { id: "iii", badge: "III", title: "PROJECTS", subtitle: "Minor image and video editing projects", rank: 4 },
-  { id: "iv", badge: "IV", title: "FOCUS", subtitle: "Localization / Translation / Language QA", rank: 5 },
+  { id: "i", badge: "I", title: "EDUCATION", subtitle: "BSc Computer Science / Universitas Sumatera Utara", rank: 3 },
+  { id: "ii", badge: "II", title: "SKILLS", subtitle: "HTML, CSS & JavaScript / Next.js & Laravel / Python & AI Tooling", rank: 4 },
+  { id: "iii", badge: "III", title: "PROJECTS", subtitle: "The Mists of Dawn / PixelValeWeb / E.D.I.T.H.", rank: 4 },
+  { id: "iv", badge: "IV", title: "FOCUS", subtitle: "Web Development / Game Development / AI Tooling", rank: 5 },
 ];
 
 const DETAILS = [
